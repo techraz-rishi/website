@@ -1,4 +1,47 @@
 <html>
+
+<script>
+HTML  CSS  JS  Result  Skip Results Iframe
+$(document).ready(function() {
+
+//MOBILE ONE AND MOBILE THREE
+var menu = "close";
+$(".mobile-one .menu-toggle, .mobile-three .menu-toggle").click(function() {
+    
+    if (menu === "close") {
+        $(this).parent().next(".mobile-nav").css("transform", "translate(0, 0)");
+       menu = "open";
+    } else {
+        $(this).parent().next(".mobile-nav").css("transform", "translate(-100%, 0)");
+        menu = "close";
+    }
+});
+
+//MOBILE TWO
+$(".mobile-two .menu-toggle").click(function() {
+  $(this).parent().next(".mobile-nav").toggle(0 , "display");
+});
+
+//MOBILE FOUR
+var menu = "close";
+$(".mobile-four .menu-toggle").click(function() {
+    
+    if (menu === "close") {
+        $(this).parent().next(".mobile-nav").css("transform", "translate(0, 0)");
+       menu = "open";
+    } else {
+        $(this).parent().next(".mobile-nav").css("transform", "translate(0, -999%)");
+        menu = "close";
+    }
+});
+
+
+
+
+});
+</script>
+
+
 <div class="mobile-wrapper">
     <h1 style="color: #3C3842;">Mobile Navigation</h1>
     <div class="mobile mobile-one">
@@ -8,44 +51,7 @@
           <div class="line"></div>
         </div>
       </div>
-      <div class="mobile-nav">
-        <h2>Navigation</h2>
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Portfolio</a></li>
-          <li><a href="#">Blog</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </div>
-    </div>
 
-    <div class="mobile mobile-two">
-      <div class="header">
-        <div class="menu-toggle">
-          <div class="line"></div>
-          <div class="line"></div>
-        </div>
-      </div>
-      <div class="mobile-nav">
-        <h2>Navigation</h2>
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Portfolio</a></li>
-          <li><a href="#">Blog</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="mobile mobile-three">
-      <div class="header">
-        <div class="menu-toggle">
-          <div class="line"></div>
-          <div class="line"></div>
-        </div>
-      </div>
       <div class="mobile-nav">
         <ul>
           <li><a href="#"><i class="fa fa-home fa-2x" aria-hidden="true"></i></a></li>
@@ -270,44 +276,5 @@ h1, h2, h3, h4, h5, h6{
 .mobile-four .mobile-nav li a:hover{
   color: #fff;
 }</style>
-<script>
-HTML  CSS  JS  Result  Skip Results Iframe
-$(document).ready(function() {
 
-//MOBILE ONE AND MOBILE THREE
-var menu = "close";
-$(".mobile-one .menu-toggle, .mobile-three .menu-toggle").click(function() {
-    
-    if (menu === "close") {
-        $(this).parent().next(".mobile-nav").css("transform", "translate(0, 0)");
-       menu = "open";
-    } else {
-        $(this).parent().next(".mobile-nav").css("transform", "translate(-100%, 0)");
-        menu = "close";
-    }
-});
-
-//MOBILE TWO
-$(".mobile-two .menu-toggle").click(function() {
-  $(this).parent().next(".mobile-nav").toggle(0 , "display");
-});
-
-//MOBILE FOUR
-var menu = "close";
-$(".mobile-four .menu-toggle").click(function() {
-    
-    if (menu === "close") {
-        $(this).parent().next(".mobile-nav").css("transform", "translate(0, 0)");
-       menu = "open";
-    } else {
-        $(this).parent().next(".mobile-nav").css("transform", "translate(0, -999%)");
-        menu = "close";
-    }
-});
-
-
-
-
-});
-</script>
 </html>
